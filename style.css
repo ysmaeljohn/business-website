@@ -38,10 +38,6 @@ img {
   background-color: transparent;
 }
 
-.business-logo {
-  left: 10px;  
-}
-
 .home-page {
   min-height: 100vh;
   background-image: url("images/Background.png");
@@ -61,15 +57,14 @@ img {
 .cookie-image-org {
   background: transparent;
   width: 20rem;
-  margin-left: 350px;
 }
 
 .home-content {
   display: flex;
   background: transparent;
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
-  justify-content: space-between;
+  justify-content: center;;
 }
 
 .heading {
@@ -93,8 +88,6 @@ a {
   font-family: "Ingrid Darling", cursive;
   font-weight: 300;
   font-size: 150px;
-  margin-top: 10px;
-  margin-left: 150px;
   padding: 5px;
   color: #734329;
 }
@@ -109,17 +102,12 @@ a {
   font-family: "Freehand", cursive;
   font-weight: 400;
   font-size: 35px;
-  margin-top: 5px;
-  margin-left: 150px;
   padding: 10px;
 
 }
 
 .about_section {
-
   font-size: 100px;
-  
-
 }
 
 #about{
