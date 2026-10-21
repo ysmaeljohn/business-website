@@ -1,60 +1,27 @@
-lucide.createIcons();
-
-const modal = document.getElementById('cart-modal');
-const closeModal = document.querySelector('.close-btn');
-const cartForm = document.getElementById('cart-form');
-
-let activeProduct = null;
-
-const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-
-addToCartButtons.forEach(button => {
-  button.addEventListener('click', (e) => {
-    const card = e.target.closest('.cards');
-
-    const name = card.querySelector('.product-title').textContent;
-    const description = card.querySelector('.product-desc').textContent;
-    const image = card.querySelector('.product-img').src;
-
-    activeProduct = { name, description, image };
-
-    document.getElementById('modal-title').textContent = name;
-    document.getElementById('modal-desc').textContent = description;
-    document.getElementById('modal-img').src = image;
-    document.getElementById('quantity').value = 1;
-
-    modal.style.display = 'flex';
-  });
-});
-
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
+const productsFiftyGrams = [
+  {
+    id: '001',
+    name: 'Chocochip',
+    price: 50,
+  }, {
+    id: '002',
+    name: "Campfire's Smores",
+    price: 55,
+  }, {
+    id: '003',
+    name: 'Biscoff Crunch',
+    price: 60,
+  }, {
+    id: '004',
+    name: 'Oreo Cheesecake',
+    price: 60,
+  }, {
+    id: '005',
+    name: 'Nutella Stuffed',
+    price: 60,
+  }, {
+    id: '006',
+    name: 'Oatmeal',
+    price: 55,
   }
-});
-
-cartForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const quantity = document.getElementById('quantity').value;
-  const selectedColor = document.querySelector('input[name="color"]:checked').value;
-
-  const cartItem = {
-    name: activeProduct.name,
-    quantity: parseInt(quantity),
-    color: selectedColor,
-    image: activeProduct.image
-  };
-
-  // Save to cart in localStorage
-  let cart = JSON.parse(localStorage.getItem('user_cart')) || [];
-  cart.push(cartItem);
-  localStorage.setItem('user_cart', JSON.stringify(cart));
-
-  alert(`Added ${quantity}x ${activeProduct.name} (${selectedColor}) to your cart!`);
-  
-  modal.style.display = 'none';
-});
+]
