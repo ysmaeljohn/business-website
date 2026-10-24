@@ -1,4 +1,4 @@
-const modal = document.getElementById('cart-modal');
+
 const closeModal = document.querySelector('.close-btn');
 const cartForm = document.getElementById('cart-form');
 
@@ -6,7 +6,7 @@ let activeProduct = null;
 
 const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
-addToCartButtons.forEach(button => {
+addToCartButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     const card = e.target.closest('.cards');
 
