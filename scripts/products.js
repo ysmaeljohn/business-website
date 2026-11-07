@@ -1,3 +1,15 @@
+function getProduct(productId) {
+  let matchingProduct;
+
+  productsFiftyGrams.forEach((product) => {
+    if (product.id === productId) {
+      matchingProduct = product;
+    }
+  });
+
+  return matchingProduct || productsFiftyGrams[0];
+}
+
 export const productsFiftyGrams = [
   {
     id: '001',
