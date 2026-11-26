@@ -9,7 +9,7 @@ export function renderCheckoutHeader() {
 
   const checkoutHeaderHTML = `
     <a class="site-brand" href="../" aria-label="Kukie home">
-      <img src="../images/kukie.png" alt="">
+      <img src="../images/Kukie.png" alt="">
       <span>Kuki</span>
     </a>
     <div class="site-header-actions">
