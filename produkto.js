@@ -64,7 +64,7 @@ function renderAddToCartForm() {
         <div class="modal-content">
           <button class="close-btn">x</button>
           <div class="modal-body">
-            <img class="form-product-image" src="../${matchingProduct.src}" alt="Product">
+            <img class="form-product-image" src="${matchingProduct.src}" alt="Product">
             <div class="modal-details">
               <h2 class="form-product-title">${matchingProduct.name}</h2>
               <div class="price-label-container">
