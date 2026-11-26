@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Design 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel = "stylesheet" href = "mainStyle.css">
+    <link rel="stylesheet" href="products-style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="home-about-mobile.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    
+    <header>
+    <nav aria-label="Main">
+      <a href="#home" class="business-logo" aria-label="Kukie home">
+        <img src="images/Cookie logo.svg" alt="">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="primary-navigation">
+        <li><a href="#home" aria-current="page" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About us</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#carousel-page" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="navIcons">
+          <a href="checkout/checkout.html" class="cart-icon" aria-label="Shopping cart">
+            <i class="fa-sharp fa-solid fa-cart-shopping iconCart" aria-hidden="true"></i>
+            <span class="cart-count-badge" aria-live="polite" aria-atomic="true" hidden>0</span>
+          </a>
+          
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id = "home">
+  <!-- Left Column: Image -->
+    <div class="hero-image">
+        <img src="images/nodiabetoCookie 1.png" alt="bgimg">
+    </div>
+
+    <!-- Right Column: Content -->
+    <div class="hero-content">
+        <h1 class="hero-title">Kuki</h1>
+        <h2>Baked fresh daily, loved always</h2>
+        <p class="hero-description">
+        What started as a passion for the perfect fresh-out-of-the-oven cookie turned into a mission to share sweet happiness with everyone. 
+        </p>
+        <div class="hero-actions">
+        <a href="#menu" class="btn-primary">View Menu</a>
+        </div>
+    </div>
+  </section>
+
+<hr>
+
+  <section class = "about" id = "about">
+
+    <div class="about-content">
+        <h1 class="about-title">Delectable,</h1>
+        <h2 class = "about-subtitle">Chocolate-y <span>goodness</span></h2>
+        <p class="about-description">
+        Have a taste of our <span>delighful, sumptuous chocolate chip cookies!</span> Baked with premium, high-quality ingredients, made with <span>love</span> and <span>care</span>. 
+        </p>
+    </div>
+
+    <div class="about-visual">
+    <img src="about us designs/AboutUSCookie.png" alt="Stack of freshly baked cookies" class="about-main-img">
+    </div>
+
+  </section>
+
+  <hr>
+
+  <section id = "menu" class = "menu-content">
+
+    <div class="main-content">
+      <div class="products-container">
+      </div>
+      <div class="toast-container" aria-live="polite"></div>
+    </div>
+
+  </section>
+
+  <hr>
+
+<section id="gallery" class="gallery-section">
+  <h2 class="section-title">Gallery</h2>
+  <div class="section-content">
+    <ul class="gallery-list">
+      <li class="gallery-item">
+        <img src="images/image-1.jpg" alt="Freshly baked chocolate chip cookies" class="gallery-image">
+      </li>
+      <li class="gallery-item">
+        <img src="images/image-2.jpg" alt="Oreo cookies and cream batch" class="gallery-image">
+      </li>
+      <li class="gallery-item">
+        <img src="images/image-3.jpg" alt="Melty s'mores cookie close-up" class="gallery-image">
+      </li>
+      <li class="gallery-item">
+        <img src="images/image-4.jpg" alt="Golden baked oatmeal cookies" class="gallery-image">
+      </li>
+      <li class="gallery-item">
+        <img src="images/image-5.jpg" alt="Nutella stuffed chocolate cookie" class="gallery-image">
+      </li>
+      <li class="gallery-item">
+        <img src="images/image-6.jpg" alt="Biscoff cookie drizzle" class="gallery-image">
+      </li>
+      <li class="gallery-item">
+        <img src="images/image-7.jpg" alt="Assorted cookie box" class="gallery-image">
+      </li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<section id = "carousel-page" class="carousel-section">
+
+      <h2> Testimonials </h2>
+
+      <div class="carousel-wrapper" role="region" aria-roledescription="carousel" aria-label="Featured items">
+        <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+          <div class="carousel-track" id="carouselTrack">
+
+              <div class="carousel-item">
+                <img src="Testimonial pics/Frame 3.png" alt="harvey" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Harvey J. Samboang</h3>
+                  <p class="card-desc">"This product is the best! The cookie tasted nice, chewy, and the right amount of sweet! Also whoever made this website is so handsome ngl."</p>
+                  <span class="card-price"><i></i></span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="Testimonial pics/Frame 4.png" alt="maglucot" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Ashley A. Maglucot</h3>
+                  <p class="card-desc">“You can tell real butter and high-quality chocolate went into these. They aren't loaded with excess sugar just to mask cheap ingredients. Warmed one up for 10 seconds in the microwave and it tasted straight out of the oven.”</p>
+                  <span class="card-price"><i></i></span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="Testimonial pics/Frame 5.png" alt="fernandez" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Louie Jay Fernandez</h3>
+                  <p class="card-desc">"I bought a sampler box just to try them out, and my family finished the entire thing in twenty minutes. The chunks of chocolate and pinch of sea salt on top make them dangerously addictive."</p>
+                  <span class="card-price"><i></i></span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="profiles/Frame 6.png" alt="chocochip" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Celine P. Garcia </h3>
+                  <p class="card-desc">"I ordered a box for my sister's birthday and she couldn't stop raving about them. The packaging kept every single cookie intact, and they still tasted fresh days later. Definitely ordering a box just for myself next time."</p>
+                  <span class="card-price"><i></i></span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="profiles/Frame 7.png" alt="chocochip" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Mark Luis Guillena</h3>
+                  <p class="card-desc">"Shet shet shet ansarap ng product nato siguro yung baker rin. Bibili uli ako for sure sobrang addictive grabe."</p>
+                  <span class="card-price"><i></i></span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="profiles/Frame 8.png" alt="chocochip" class="card-img">
+                <div class="card-body">
+                  <h3 class="card-title">Rafael C. Morales</h3>
+                  <p class="card-desc">"This product is so delicious and sweet. I would one-hundred percent buy more and try the others that I haven't tried!"</p>
+                  <span class="card-price"><i></i></span>
+                </div>
+              </div>
+
+          </div>
+        <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+
+    </div>
+
+    </section>
+<hr>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-container">
+        <!-- Brand / Summary Column -->
+        <div class="footer-col">
+          <h3>Kuki</h3>
+          <p>Baking sweet, delicious cookies for your everyday delicious treat!.</p>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=andreiperola07%40gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61593571490545&mibextid=wwXIfr&rdid=m3ne6a4j3n7KDc0v&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14tc1utLJzk%2F%3Fmibextid%3DwwXIfr#">Messaging</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details Column -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <address class="footer-contact">
+            <p>Gen. Luna corner Muralla St., Intramuros, Manila, 1002 Metro Manila, Philippines</p>
+            <p>Phone: <a href="tel:+63281234567">+63 (2) 8123-4567</a></p>
+            <p>Email: <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=andreiperola07%40gmail.com" target="_blank" rel="noopener noreferrer">info@kuki.com</a></p>
+            <p>Hours: Monday-Saturday 9:00AM to 5:00 PM</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Company Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="js-cart-form cart-form" style="display: none;">
+    </div>
+
+    <script type="module" src="produkto.js"></script>
+</body>
+</html>

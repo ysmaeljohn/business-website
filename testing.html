@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Rating & Reviews</title>
+  <link rel="stylesheet" href="csTestings.css">
+</head>
+<body>
+
+  <div class="product-card">
+    <h2>Wireless Noise-Canceling Headphones</h2>
+    <div class="average-rating">
+      Average Rating: <span id="avg-score">0.0</span> / 5 (<span id="review-count">0</span> reviews)
+    </div>
+
+    <!-- Review Submission Form -->
+    <form id="review-form">
+      <div class="star-input" id="star-container">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      
+      <input type="text" id="username" placeholder="Your Name" required>
+      <textarea id="comment" rows="3" placeholder="Write your review here..." required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <!-- Submitted Reviews List -->
+    <div class="reviews-section">
+      <h3>Customer Reviews</h3>
+      <div id="reviews-list"></div>
+    </div>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>

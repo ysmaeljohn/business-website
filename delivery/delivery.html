@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffaf4">
+  <link rel="stylesheet" href="delivery.css">
+  <link rel="stylesheet" href="delivery-mobile.css">
+  <link rel="stylesheet" href="delivery-header.css">
+  <title>Track Your Orders | Kuki</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner site-header-inner--compact">
+      <a class="site-brand" href="/" aria-label="Kukie home">
+        <img src="../images/kukie.png" alt="">
+        <span>Kuki</span>
+      </a>
+      <div class="site-header-actions">
+        <a class="site-header-action" href="../checkout/checkout.html" aria-label="Return to checkout">
+          <span class="site-header-desktop-label">Back to checkout</span>
+          <span class="site-header-mobile-label">Checkout</span>
+        </a>
+        <a class="site-header-action" href="../" aria-label="Continue shopping">
+          <span class="site-header-desktop-label">Continue shopping</span>
+          <span class="site-header-mobile-label">Shop</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="delivery-main">
+    <section class="orders-page" aria-labelledby="tracking-title">
+      <p class="tracking-eyebrow">ORDER UPDATES</p>
+      <h1 id="tracking-title">Track your orders</h1>
+      <p class="tracking-intro">Your orders and their delivery progress are collected here.</p>
+
+      <div class="orders-list" id="orders-list" aria-live="polite"></div>
+      <p class="no-orders" id="no-orders" hidden>
+        No orders yet. Orders you place will appear here with their delivery progress.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="delivery.js"></script>
+</body>
+</html>

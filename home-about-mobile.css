@@ -1,0 +1,17 @@
+@media (max-width: 850px) {
+  .hero-image,
+  .about-visual {
+    display: none !important;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .about {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    background-image: none !important;
+  }
+}

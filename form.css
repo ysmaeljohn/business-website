@@ -1,0 +1,144 @@
+.cart-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #f8efe1;
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  height: auto;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #5a3d28;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.price-label-container {
+  color: #b07542;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.form-group input[type="number"] {
+  padding: 8px;
+  border: 1px solid #c8a27d;
+  border-radius: 6px;
+  width: 80px;
+}
+
+.variations {
+  position: relative;
+  display: flex;
+  width: min(100%, 200px);
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.variations::before {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  background: #805234;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(90, 61, 40, 0.2);
+  content: "";
+  transition: transform 0.40s ease;
+}
+
+.variations:has(input[data-grams="100g"]:checked)::before {
+  transform: translateX(100%);
+}
+
+.variation-option {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  flex: 1;
+  min-height: 40px;
+  place-items: center;
+  color: #684229;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.variation-option:has(input:checked) {
+  color: #fff;
+}
+
+.variation-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.variation-option input:focus-visible + span {
+  outline: 2px solid #38291f;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.confirm-cart-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px;
+  background-color: #c88a53;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-cart-btn:hover {
+  background-color: #b07542;
+}

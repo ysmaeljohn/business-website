@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="checkout-mobile.css">
+  <link rel="stylesheet" href="checkout-header.css">
+  <title>Checkout</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner site-header-inner--compact"></div>
+  </header>
+  
+  <main>
+    <div class="page-title">Review your order</div>
+      <div class="checkout-grid">
+        <div class="checkout-left-column">
+          <div class="add-cookie-area">
+            <button type="button" class="add-cookie-trigger js-add-cookie-trigger" aria-expanded="false" aria-controls="add-cookie-form">
+              <span aria-hidden="true">+</span> Add another cookie
+            </button>
+            <form class="add-cookie-form js-add-cookie-form" id="add-cookie-form" hidden>
+              <div class="add-cookie-field">
+                <label for="add-cookie-product">Cookie flavor</label>
+                <select id="add-cookie-product" name="productId" required></select>
+              </div>
+              <fieldset class="add-cookie-size">
+                <legend>Size</legend>
+                <div class="add-cookie-size-options">
+                  <label><input type="radio" name="add-cookie-size" value="50g" checked> 50 grams</label>
+                  <label><input type="radio" name="add-cookie-size" value="100g"> 100 grams</label>
+                </div>
+              </fieldset>
+              <div class="add-cookie-field">
+                <label for="add-cookie-quantity">Quantity</label>
+                <input id="add-cookie-quantity" name="quantity" type="number" value="1" min="1" max="99" step="1" required>
+              </div>
+              <p class="add-cookie-total" aria-live="polite">
+                Item total: <strong class="js-add-cookie-total">₱0.00</strong>
+              </p>
+              <div class="add-cookie-actions">
+                <button type="submit" class="add-cookie-submit">Add to order</button>
+                <button type="button" class="add-cookie-cancel js-add-cookie-cancel">Cancel</button>
+              </div>
+            </form>
+          </div>
+          <div class="items-cart-container">
+          </div>
+        </div>
+        <div class="checkout-right-column" hidden>
+          <section class="delivery-details-card" aria-labelledby="delivery-details-title">
+            <h2 id="delivery-details-title">Delivery details</h2>
+            <p class="delivery-details-intro">
+              Enter the recipient and address for this order. This prototype keeps details in this browser only; use mock information.
+            </p>
+            <form id="delivery-details-form">
+              <div class="delivery-details-grid">
+                <div class="delivery-form-field">
+                  <label for="delivery-full-name">Recipient name</label>
+                  <input id="delivery-full-name" name="fullName" type="text" autocomplete="name" data-letters-only pattern="[^0-9]+" required>
+                </div>
+                <div class="delivery-form-field">
+                  <label for="delivery-contact-number">Contact number</label>
+                  <input id="delivery-contact-number" name="contactNumber" type="tel" autocomplete="tel" data-phone-only pattern="[0-9+() -]+" required>
+                </div>
+                <div class="delivery-form-field delivery-form-field-wide">
+                  <label for="delivery-street">Street address / house number</label>
+                  <input id="delivery-street" name="street" type="text" autocomplete="address-line1" required>
+                </div>
+                <div class="delivery-form-field">
+                  <label for="delivery-barangay">Barangay</label>
+                  <input id="delivery-barangay" name="barangay" type="text" data-letters-only pattern="[^0-9]+" required>
+                </div>
+                <div class="delivery-form-field">
+                  <label for="delivery-city">City / municipality</label>
+                  <input id="delivery-city" name="city" type="text" autocomplete="address-level2" data-letters-only pattern="[^0-9]+" required>
+                </div>
+                <div class="delivery-form-field">
+                  <label for="delivery-province">Province</label>
+                  <input id="delivery-province" name="province" type="text" autocomplete="address-level1" data-letters-only pattern="[^0-9]+" required>
+                </div>
+                <div class="delivery-form-field">
+                  <label for="delivery-postal-code">Postal code</label>
+                  <input id="delivery-postal-code" name="postalCode" type="text" inputmode="numeric" autocomplete="postal-code" data-digits-only pattern="[0-9]+" required>
+                </div>
+                <div class="delivery-form-field delivery-form-field-wide">
+                  <label for="delivery-instructions">Delivery instructions <span>(optional)</span></label>
+                  <textarea id="delivery-instructions" name="deliveryInstructions" rows="3"></textarea>
+                </div>
+              </div>
+            </form>
+            <div class="delivery-options js-delivery-options"></div>
+          </section>
+          <section class="payment-summary" aria-labelledby="order-summary-title">
+            <div class="payment-summary-title" id="order-summary-title">
+              Order Summary
+            </div>
+
+            <fieldset class="payment-methods">
+              <legend>Payment method</legend>
+              <div class="payment-method-options">
+                <label class="payment-method-option">
+                  <input type="radio" name="order-payment-method" value="GCash" checked required>
+                  <span class="payment-method-copy">
+                    <strong>GCash</strong>
+                    <span>Digital wallet</span>
+                  </span>
+                </label>
+                <label class="payment-method-option">
+                  <input type="radio" name="order-payment-method" value="Cash on Delivery" required>
+                  <span class="payment-method-copy">
+                    <strong>Cash on Delivery</strong>
+                    <span>Pay in cash upon delivery</span>
+                  </span>
+                </label>
+              </div>
+              <p class="payment-method-note">Demo only — payment is not processed here.</p>
+            </fieldset>
+
+            <div class="payment-summary-row">
+              <div class="js-summary-item-count">Items (0):</div>
+              <div class="payment-summary-money js-summary-items">₱0.00</div>
+            </div>
+
+            <div class="payment-summary-row">
+              <div>Shipping &amp; handling:</div>
+              <div class="payment-summary-money js-summary-shipping">₱0.00</div>
+            </div>
+
+            <div class="payment-summary-row total-row">
+              <div>Order total:</div>
+              <div class="payment-summary-money js-summary-total">₱0.00</div>
+            </div>
+
+            <button class="place-order-button button-primary">
+              Place your order
+            </button>
+          </section>
+        </div>
+      </div>
+  </main>
+
+  <div class="toast-container" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+  <script type="module" src="checkout.js"></script>
+</body>
+</html>
